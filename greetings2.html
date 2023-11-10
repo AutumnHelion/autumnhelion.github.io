@@ -7,10 +7,6 @@
     <title>Greetings</title>
 
     <style>
-        body {
-            font-variant-caps: all-petite-caps;
-        }
-        
         .widget {
             padding: 5px 5px;
             color: #065130;
@@ -26,18 +22,19 @@
         }
         
         .greet {
-            font-family: Quicksand;
-            font-size: 3em;
+            font-family: Lobster Two;
+            font-size: 45px;
         }
         
         .date {
-            font-family: Ubuntu Mono;
-            font-size: 2em;
+            font-variant-caps: all-petite-caps;
+            font-family: Quicksand;
+            font-size: 30px;
         }
         
         .clock {
             font-family: Ubuntu Mono;
-            font-size: 2em;
+            font-size: 25px;
         }
         
         .time {
@@ -117,9 +114,9 @@
             var seconds = padZeros(today.getSeconds());
 
             if (today.getHours() >= 12) {
-                seconds += " pm"
+                seconds += " PM"
             } else {
-                seconds += " am"
+                seconds += " AM"
             }
 
             document.getElementById('hour').innerHTML = hour;
