@@ -2,13 +2,27 @@
 <html lang="en">
 
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omun Buttons</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .button-container {
+            text-align: center;
+        }
+        
          :root {
             --my-color: #065130;
-            --my-color-accent: #022516;
+            --my-color-accent: #033a22;
             --black: #3c3c3c;
             --black-accent: #2d2d2d;
             --blue: #809bce;
@@ -48,7 +62,8 @@
             color: #ffffff;
             font-family: 'Quicksand';
             display: inline-block;
-            margin: 10px;
+            margin: 5px;
+            /* Espacement entre les boutons */
         }
         
         .my-color {
