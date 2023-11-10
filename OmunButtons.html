@@ -245,35 +245,25 @@
 
 <body>
 
-    <button class="btn large my-color rounded" type="button" onclick="navigate()"> <i class="fa-solid fa-map"></i> Map Creator</button>
+    <button class="btn large my-color rounded" type="button" onclick="navigate('https://azgaar.github.io/Fantasy-Map-Generator/')">
+        <i class="fa-solid fa-map"></i> Map Creator
+    </button>
+
+    <button class="btn large my-color rounded" type="button" onclick="navigate('https://www.fantasynamegenerators.com')">
+        <i class="fa-solid fa-address-card"></i> Name Generator
+    </button>
+
+    <button class="btn large my-color rounded" type="button" onclick="navigate('https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal')">
+        <i class="fa-solid fa-globe"></i> Wikipedia
+    </button>
+
+    <button class="btn large my-color rounded" type="button" onclick="navigate('https://chat.openai.com/c/b181f100-caca-4adf-ab6a-c6bd93901608')">
+        <i class="fa-solid fa-robot"></i> ChatGPT
+    </button>
 
     <script>
-        function navigate() {
-            window.open("https://azgaar.github.io/Fantasy-Map-Generator/", '_blank').focus();
-        }
-    </script>
-
-    <button class="btn large my-color rounded" type="button" onclick="navigate()"> <i class="fa-solid fa-address-card"></i> Name Generator</button>
-
-    <script>
-        function navigate() {
-            window.open("https://www.fantasynamegenerators.com", '_blank').focus();
-        }
-    </script>
-
-    <button class="btn large my-color rounded" type="button" onclick="navigate()"> <i class="fa-solid fa-globe"></i> Wikipedia</button>
-
-    <script>
-        function navigate() {
-            window.open("https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal", '_blank').focus();
-        }
-    </script>
-
-    <button class="btn large my-color rounded" type="button" onclick="navigate()"> <i class="fa-solid fa-robot"></i> ChatGPT</button>
-
-    <script>
-        function navigate() {
-            window.open("https://chat.openai.com/c/b181f100-caca-4adf-ab6a-c6bd93901608", '_blank').focus();
+        function navigate(url) {
+            window.open(url, '_blank').focus();
         }
     </script>
 
