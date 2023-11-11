@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainMenu</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .navMenu {
+            font-family: 'Quicksand';
+            padding: 10px;
+            text-align: center;
+            margin: 9px auto;
+            width: fit-content;
+        }
+        
+        .navMenu a {
+            color: #065130;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 10px;
+            border-right: 1px solid #065130;
+            /* Ajoute une bordure à droite de chaque élément */
+            transition: color 0.3s;
+            /* Ajoute une transition de couleur pour un effet en douceur */
+        }
+        
+        .navMenu a:last-child {
+            border-right: none;
+            /* Supprime la bordure à droite du dernier élément */
+        }
+        
+        .navMenu>nav:first-of-type a {
+            border-right: 1px solid #065130;
+        }
+        
+        .navMenu a:hover {
+            color: #A3C4A0;
+            /* Couleur différente au survol */
+        }
+        
+        .background {
+            background-color: rgba(255, 255, 255, 0);
+        }
+        
+        .border {
+            border: 1px solid #065130;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #191919;
+            min-width: 300px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navMenu border">
+
+        <nav class="dropdown">
+            <a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bars"></i> Home</a>
+        </nav>
+
+        <nav class="dropdown">
+            <a id="projects" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Projects</a>
+            <nav class="dropdown-content">
+                <p>
+                    <a id="personalp" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Personal projects</a>
+                </p>
+                <p>
+                    <a id="writingp" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Writing projects</a>
+                </p>
+                <p>
+                    <a id="ts4p" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> TS4 projects</a>
+                </p>
+            </nav>
+        </nav>
+
+        <nav class="dropdown">
+            <a id="resources" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-toolbox"></i> Resources</a>
+            <nav class="dropdown-content">
+                <p>
+                    <a id="resources1" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-toolbox"></i> Resources 1</a>
+                </p>
+                <p>
+                    <a id="resources2" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-toolbox"></i> Resources 2</a>
+                </p>
+            </nav>
+        </nav>
+
+        <nav class="dropdown">
+            <a id="journal" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Journal</a>
+        </nav>
+
+    </nav>
+
+    <script>
+        let direction = "horizontal";
+        if (direction === "vertical") {
+            document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+        }
+
+        function navigate(id) {
+            if (id == 'home')
+                window.open("https://www.notion.so/noxsjournal/Home-Page-8baef3724aa2477eb17a96371ef99c1d?pvs=4", '_blank').focus();
+            else if (id == "projects")
+                window.open("https://www.notion.so/noxsjournal/fbe21c8eb1524913b62a1429224a77b4?v=9637e11d83d44e11baacd420e6b1fc6d&pvs=4", '_blank').focus();
+            else if (id == "personalp")
+                window.open("https://www.notion.so/noxsjournal/fbe21c8eb1524913b62a1429224a77b4?v=9637e11d83d44e11baacd420e6b1fc6d&pvs=4", '_blank').focus();
+            else if (id == "writingp")
+                window.open("https://www.notion.so/noxsjournal/fbe21c8eb1524913b62a1429224a77b4?v=9637e11d83d44e11baacd420e6b1fc6d&pvs=4", '_blank').focus();
+            else if (id == "ts4p")
+                window.open("https://www.notion.so/noxsjournal/fbe21c8eb1524913b62a1429224a77b4?v=9637e11d83d44e11baacd420e6b1fc6d&pvs=4", '_blank').focus();
+            else if (id == "resources")
+                window.open("https://www.notion.so/noxsjournal/Ressources-d0a79fd8b5f7483aac728a6f4ac43dcb?pvs=4", '_blank').focus();
+            else if (id == "resources1")
+                window.open("https://www.notion.so/noxsjournal/2178cda9b5c347629708dce2e67a4aa0?v=5714a66f5bb24b7097953e4d1e31f27a&pvs=4", '_blank').focus();
+            else if (id == "resources2")
+                window.open("https://www.notion.so/noxsjournal/2178cda9b5c347629708dce2e67a4aa0?v=5714a66f5bb24b7097953e4d1e31f27a&pvs=4", '_blank').focus();
+            else if (id == "journal")
+                window.open("https://www.notion.so/noxsjournal/2178cda9b5c347629708dce2e67a4aa0?v=5714a66f5bb24b7097953e4d1e31f27a&pvs=4", '_blank').focus();
+        }
+    </script>
+</body>
+
+</html>
