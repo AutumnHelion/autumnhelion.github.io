@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TogetherSince</title>
+
+    <style>
+        body {
+            font-family: 'Quicksand';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff00;
+            /* Couleur de fond de la page */
+        }
+        
+        #timeSince {
+            font-size: 18px;
+            padding: 15px;
+            background-color: #065130;
+            /* Couleur de fond du texte */
+            color: #A3C4A0;
+            /* Couleur du texte */
+            border-radius: 10px;
+            /* Bords arrondis */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Ombre */
+        }
+    </style>
+</head>
+
+<body>
+    <p id="timeSince"></p>
+
+    <script>
+        // Date à partir de laquelle le temps sera calculé (changez cette date selon vos besoins)
+        const startDate = new Date("2021-07-16");
+
+        // Date actuelle
+        const currentDate = new Date();
+
+        // Calcul du temps écoulé en millisecondes
+        const timeElapsed = currentDate - startDate;
+
+        // Conversion du temps écoulé en années, mois, jours
+        const years = Math.floor(timeElapsed / (365.25 * 24 * 60 * 60 * 1000));
+        const months = Math.floor((timeElapsed % (365.25 * 24 * 60 * 60 * 1000)) / (30.44 * 24 * 60 * 60 * 1000));
+        const days = Math.floor((timeElapsed % (30.44 * 24 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000));
+
+        // Affichage du temps écoulé
+        const timeSinceMessage = `Together since ${years} years, ${months} months, ${days} days.`;
+
+        // Affichage du temps écoulé dans l'élément avec l'ID "timeSince"
+        document.getElementById("timeSince").textContent = timeSinceMessage;
+    </script>
+</body>
+
+</html>
