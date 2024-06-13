@@ -52,7 +52,7 @@
         const days = Math.floor((timeElapsed % (30.44 * 24 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000));
 
         // Affichage du temps écoulé
-        const timeSinceMessage = `Together since ${years} years, ${months} months, ${days} days.`;
+        const timeSinceMessage = `Together since ${years} years, ${months} months and ${days} days.`;
 
         // Affichage du temps écoulé dans l'élément avec l'ID "timeSince"
         document.getElementById("timeSince").textContent = timeSinceMessage;
