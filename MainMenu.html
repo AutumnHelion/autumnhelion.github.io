@@ -108,13 +108,22 @@
         </nav>
 
         <nav class="dropdown">
-            <a id="resources" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-toolbox"></i> Resources</a>
-            <nav>
+            <a id="journal" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Journal</a>
+            <nav class="dropdown-content">
+                <p>
+                    <a id="jmedialist" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-clapperboard"></i> Media List</a>
+                </p>
+                <p>
+                    <a id="jcare" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-sink"></i> Care</a>
+                </p>
+                <p>
+                    <a id="jnightdiaries" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-moon"></i> Night Diaries</a>
+                </p>
             </nav>
         </nav>
 
         <nav class="dropdown">
-            <a id="journal" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Journal</a>
+            <a id="resources" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-toolbox"></i> Resources</a>
         </nav>
 
     </nav>
@@ -168,6 +177,12 @@
                 window.open("https://www.notion.so/noxsjournal/Resources-6817d53103584d3dab23ed4eb53c3854?pvs=4", '_blank').focus();
             else if (id == "journal")
                 window.open("https://www.notion.so/noxsjournal/Journal-235fb0df5c994067a92892b043cb32ad?pvs=4", '_blank').focus();
+            else if (id == "jmedialist")
+                window.open("https://www.notion.so/noxsjournal/Media-List-5e1b6cf348424f3bb10605de7efd43db?pvs=4", '_blank').focus();
+            else if (id == "jcare")
+                window.open("https://www.notion.so/noxsjournal/Care-6d08e9d06a5f4d7ba484baf883dacfa0?pvs=4", '_blank').focus();
+            else if (id == "jnightdiaries")
+                window.open("https://www.notion.so/noxsjournal/Night-Diaries-130cf0121bdf802099b7f530ae00b350?pvs=4", '_blank').focus();
         }
     </script>
 </body>
